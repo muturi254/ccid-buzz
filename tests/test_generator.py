@@ -13,7 +13,7 @@ def test_sample_multiple_word():
     assert len(words) == 2
     assert words[0] in i
     assert words[1] in i
-    assert words[0] not in words[1]
+    assert words[0] is not words[1]
 
 
 def test_generate_buzz_of_at_least_five_words():
