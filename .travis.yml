@@ -1,3 +1,12 @@
+sudo: required
+
+services:
+  - docker
+
 language: python:3.6.7
+
 script:
   - python3.6 -m pytest -v
+
+after_success:
+  - sh .travis/deploy_deckerhub.sh
