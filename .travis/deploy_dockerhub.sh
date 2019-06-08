@@ -6,8 +6,5 @@ else
     TAG="$TRAVIS_BRANCH"
 fi
 
-REPO = ccid-buzz
-# docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
-docker build -f Dockerfile -t $DOCKER_USERNAME/ccid-buzz:$TAG .
-# docker push $TRAVIS_REPO_SLUG
-docker push $DOCKER_USERNAME/${PROJECT}
+docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
+docker push $TRAVIS_REPO_SLUG
