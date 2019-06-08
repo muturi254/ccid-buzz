@@ -6,4 +6,4 @@ else
     TAG="$TRAVIS_BRANCH"
 fi
 sudo docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
-sudo docker push $TRAVIS_REPO_SLUG
+sudo docker push $DOCKER_USERNAME/$TRAVIS_REPO_SLUG
