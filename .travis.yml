@@ -3,10 +3,10 @@ sudo: required
 services:
   - docker
 
-language: python:3.6
+language: python
 
 script:
-  - python3.6 -m pytest -v
+  - python -m pytest -v
 
 after_success:
   - sh .travis/deploy_deckerhub.sh
